@@ -9,15 +9,15 @@ set(SRC_DIR ${CMAKE_SOURCE_DIR}/src)
 set(MAT_DIR ${SRC_DIR}/mat)
 add_subdirectory(${MAT_DIR})
 
-set(OpenBLAS_HOME /Users/zhouxiumin/github/library/OpenBLAS)
+set(OpenBLAS_HOME ${CMAKE_SOURCE_DIR}/lib/openblas/darwin)
 
 include_directories(
-        ${OpenBLAS_HOME}
+        ${OpenBLAS_HOME}/include
         ${MAT_DIR}
 )
 
 link_directories(
-        ${OpenBLAS_HOME}
+        ${OpenBLAS_HOME}/lib
 )
 
 add_executable(cpplearn main.cpp src/mat/matrix.h src/mat/matrix.cpp)
