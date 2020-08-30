@@ -1,8 +1,8 @@
 #include <iostream>
-#include "matrix.h"
+#include "prime.h"
 
 int main() {
-    mat::test();
+    prime::test();
     return 0;
 }
 
